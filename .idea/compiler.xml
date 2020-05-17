@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="project-common" />
-        <module name="project-dao" />
         <module name="project-service" />
+        <module name="project-dao" />
       </profile>
     </annotationProcessing>
   </component>
