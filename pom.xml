@@ -7,12 +7,19 @@
     <groupId>com.gungun.project</groupId>
     <artifactId>project-structure</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>${project.structure.version}</version>
+
     <modules>
         <module>project-common</module>
         <module>project-dao</module>
         <module>project-service</module>
+        <module>project-web</module>
     </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.structure.version>1.0-SNAPSHOT</project.structure.version>
+    </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,17 +28,23 @@
     </parent>
 
     <dependencies>
-        <!--web的jar包 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <!--lombok的jar包-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+
+        <!--json使用-->
+        <dependency>
+             <groupId>com.alibaba</groupId>
+             <artifactId>fastjson</artifactId>
+             <version>1.2.58</version>
+             <scope>compile</scope>
         </dependency>
 
     </dependencies>

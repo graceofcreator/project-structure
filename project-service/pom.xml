@@ -5,11 +5,18 @@
     <parent>
         <artifactId>project-structure</artifactId>
         <groupId>com.gungun.project</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${project.structure.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>project-service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.gungun.project</groupId>
+            <artifactId>project-dao</artifactId>
+            <version>${project.structure.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

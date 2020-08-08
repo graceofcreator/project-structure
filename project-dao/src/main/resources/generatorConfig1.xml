@@ -1,0 +1,45 @@
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="config.properties"/>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+
+        <plugin type="com.gungun.project.generator.DefinePlugin">
+
+        </plugin>
+
+        <commentGenerator type="com.gungun.project.generator.DefineGenerator">
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+            <property name="beginningDelimiter" value="`"/>
+            <property name="endingDelimiter" value="`"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+                        connectionURL="${jdbc.url}"
+                        userId="${jdbc.user}"
+                        password="${jdbc.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetProject="${targetProject}/java"
+                            targetPackage="${modelTargetPackage}"/>
+
+        <sqlMapGenerator targetProject="${targetProject}/resources"
+                         targetPackage="mybatis"/>
+
+        <javaClientGenerator targetProject="${targetProject}/java"
+                             targetPackage="${daoTargetPackage}"
+                             type="XMLMAPPER"/>
+
+         <table tableName="elec_signature" domainObjectName="ElecSignature"
+                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+         <!-- <table tableName="file_manage_audit" domainObjectName="FileManageAuditPo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+          <table tableName="file_manage_final" domainObjectName="FileManageFinalPo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+          <table tableName="file_recommend" domainObjectName="FileRecommendPo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+          <table tableName="file_recommend_details" domainObjectName="FileRecommendDetailsPo"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+          <table tableName="file_manage_downtimes_log" domainObjectName="FileManageDowntimesLogPo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        -->
+    </context>
+</generatorConfiguration>
