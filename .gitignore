@@ -1,1 +1,9 @@
 .idea/
+project-common/target/
+project-dao/target/
+project-service/target/
+project-web/target/
+project-web/*.iml
+project-dao/*.iml
+project-common/*.iml
+project-service/*.iml

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aisino.fuwu.data.downcenter.mysql.ElecSignatureMapper">
+  <resultMap id="BaseResultMap" type="com.aisino.fuwu.data.entity.model.po.ElecSignature">
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="biz_alias" jdbcType="VARCHAR" property="bizAlias" />
+    <result column="biz_name" jdbcType="VARCHAR" property="bizName" />
+    <result column="channel_alias" jdbcType="VARCHAR" property="channelAlias" />
+    <result column="channel_name" jdbcType="VARCHAR" property="channelName" />
+    <result column="seal_name" jdbcType="VARCHAR" property="sealName" />
+    <result column="original_file_id" jdbcType="VARCHAR" property="originalFileId" />
+    <result column="file_id" jdbcType="VARCHAR" property="fileId" />
+    <result column="elec_seal_id" jdbcType="BIGINT" property="elecSealId" />
+    <result column="seal_id" jdbcType="VARCHAR" property="sealId" />
+    <result column="rlseal_id" jdbcType="VARCHAR" property="rlsealId" />
+    <result column="sign_status" jdbcType="TINYINT" property="signStatus" />
+    <result column="page" jdbcType="INTEGER" property="page" />
+    <result column="left" jdbcType="REAL" property="left" />
+    <result column="top" jdbcType="REAL" property="top" />
+    <result column="width" jdbcType="REAL" property="width" />
+    <result column="height" jdbcType="REAL" property="height" />
+    <result column="request_ip" jdbcType="VARCHAR" property="requestIp" />
+    <result column="sys_trace_no" jdbcType="VARCHAR" property="sysTraceNo" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="reason" jdbcType="LONGVARCHAR" property="reason" />
+  </resultMap>
+  <insert id="insert" parameterType="com.aisino.fuwu.data.entity.model.po.ElecSignature">
+    insert into elec_signature (id, biz_alias, biz_name, 
+      channel_alias, channel_name, seal_name, 
+      original_file_id, file_id, elec_seal_id, 
+      seal_id, rlseal_id, sign_status, 
+      page, left, top, width, 
+      height, request_ip, sys_trace_no, 
+      create_time, reason)
+    values (#{id,jdbcType=VARCHAR}, #{bizAlias,jdbcType=VARCHAR}, #{bizName,jdbcType=VARCHAR}, 
+      #{channelAlias,jdbcType=VARCHAR}, #{channelName,jdbcType=VARCHAR}, #{sealName,jdbcType=VARCHAR}, 
+      #{originalFileId,jdbcType=VARCHAR}, #{fileId,jdbcType=VARCHAR}, #{elecSealId,jdbcType=BIGINT}, 
+      #{sealId,jdbcType=VARCHAR}, #{rlsealId,jdbcType=VARCHAR}, #{signStatus,jdbcType=TINYINT}, 
+      #{page,jdbcType=INTEGER}, #{left,jdbcType=REAL}, #{top,jdbcType=REAL}, #{width,jdbcType=REAL}, 
+      #{height,jdbcType=REAL}, #{requestIp,jdbcType=VARCHAR}, #{sysTraceNo,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{reason,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, biz_alias, biz_name, channel_alias, channel_name, seal_name, original_file_id, 
+    file_id, elec_seal_id, seal_id, rlseal_id, sign_status, page, left, top, width, height, 
+    request_ip, sys_trace_no, create_time, reason
+    from elec_signature
+  </select>
+  <resultMap id="BaseResultMap" type="com.aisino.fuwu.data.entity.model.po.ElecSignature">
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="biz_alias" jdbcType="VARCHAR" property="bizAlias" />
+    <result column="biz_name" jdbcType="VARCHAR" property="bizName" />
+    <result column="channel_alias" jdbcType="VARCHAR" property="channelAlias" />
+    <result column="channel_name" jdbcType="VARCHAR" property="channelName" />
+    <result column="seal_name" jdbcType="VARCHAR" property="sealName" />
+    <result column="original_file_id" jdbcType="VARCHAR" property="originalFileId" />
+    <result column="file_id" jdbcType="VARCHAR" property="fileId" />
+    <result column="elec_sealid" jdbcType="BIGINT" property="elecSealid" />
+    <result column="seal_id" jdbcType="VARCHAR" property="sealId" />
+    <result column="rlseal_id" jdbcType="VARCHAR" property="rlsealId" />
+    <result column="sign_status" jdbcType="TINYINT" property="signStatus" />
+    <result column="page" jdbcType="INTEGER" property="page" />
+    <result column="left" jdbcType="DECIMAL" property="left" />
+    <result column="top" jdbcType="DECIMAL" property="top" />
+    <result column="width" jdbcType="DECIMAL" property="width" />
+    <result column="height" jdbcType="DECIMAL" property="height" />
+    <result column="request_ip" jdbcType="VARCHAR" property="requestIp" />
+    <result column="sys_trace_no" jdbcType="VARCHAR" property="sysTraceNo" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="reason" jdbcType="LONGVARCHAR" property="reason" />
+  </resultMap>
+  <insert id="insert" parameterType="com.aisino.fuwu.data.entity.model.po.ElecSignature">
+    insert into elec_signature (id, biz_alias, biz_name, 
+      channel_alias, channel_name, seal_name, 
+      original_file_id, file_id, elec_sealid, 
+      seal_id, rlseal_id, sign_status, 
+      page, left, top, width, 
+      height, request_ip, sys_trace_no, 
+      create_time, reason)
+    values (#{id,jdbcType=VARCHAR}, #{bizAlias,jdbcType=VARCHAR}, #{bizName,jdbcType=VARCHAR}, 
+      #{channelAlias,jdbcType=VARCHAR}, #{channelName,jdbcType=VARCHAR}, #{sealName,jdbcType=VARCHAR}, 
+      #{originalFileId,jdbcType=VARCHAR}, #{fileId,jdbcType=VARCHAR}, #{elecSealid,jdbcType=BIGINT}, 
+      #{sealId,jdbcType=VARCHAR}, #{rlsealId,jdbcType=VARCHAR}, #{signStatus,jdbcType=TINYINT}, 
+      #{page,jdbcType=INTEGER}, #{left,jdbcType=DECIMAL}, #{top,jdbcType=DECIMAL}, #{width,jdbcType=DECIMAL}, 
+      #{height,jdbcType=DECIMAL}, #{requestIp,jdbcType=VARCHAR}, #{sysTraceNo,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{reason,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, biz_alias, biz_name, channel_alias, channel_name, seal_name, original_file_id, 
+    file_id, elec_sealid, seal_id, rlseal_id, sign_status, page, left, top, width, height, 
+    request_ip, sys_trace_no, create_time, reason
+    from elec_signature
+  </select>
+  <resultMap id="BaseResultMap" type="com.aisino.fuwu.data.entity.model.po.ElecSignature">
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="biz_alias" jdbcType="VARCHAR" property="bizAlias" />
+    <result column="biz_name" jdbcType="VARCHAR" property="bizName" />
+    <result column="channel_alias" jdbcType="VARCHAR" property="channelAlias" />
+    <result column="channel_name" jdbcType="VARCHAR" property="channelName" />
+    <result column="seal_name" jdbcType="VARCHAR" property="sealName" />
+    <result column="original_file_id" jdbcType="VARCHAR" property="originalFileId" />
+    <result column="file_id" jdbcType="VARCHAR" property="fileId" />
+    <result column="elec_sealid" jdbcType="BIGINT" property="elecSealid" />
+    <result column="seal_id" jdbcType="VARCHAR" property="sealId" />
+    <result column="rlseal_id" jdbcType="VARCHAR" property="rlsealId" />
+    <result column="sign_status" jdbcType="TINYINT" property="signStatus" />
+    <result column="page" jdbcType="INTEGER" property="page" />
+    <result column="left" jdbcType="INTEGER" property="left" />
+    <result column="top" jdbcType="INTEGER" property="top" />
+    <result column="width" jdbcType="INTEGER" property="width" />
+    <result column="height" jdbcType="INTEGER" property="height" />
+    <result column="request_ip" jdbcType="VARCHAR" property="requestIp" />
+    <result column="sys_trace_no" jdbcType="VARCHAR" property="sysTraceNo" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="reason" jdbcType="LONGVARCHAR" property="reason" />
+  </resultMap>
+  <insert id="insert" parameterType="com.aisino.fuwu.data.entity.model.po.ElecSignature">
+    insert into elec_signature (id, biz_alias, biz_name, 
+      channel_alias, channel_name, seal_name, 
+      original_file_id, file_id, elec_sealid, 
+      seal_id, rlseal_id, sign_status, 
+      page, left, top, width, 
+      height, request_ip, sys_trace_no, 
+      create_time, reason)
+    values (#{id,jdbcType=VARCHAR}, #{bizAlias,jdbcType=VARCHAR}, #{bizName,jdbcType=VARCHAR}, 
+      #{channelAlias,jdbcType=VARCHAR}, #{channelName,jdbcType=VARCHAR}, #{sealName,jdbcType=VARCHAR}, 
+      #{originalFileId,jdbcType=VARCHAR}, #{fileId,jdbcType=VARCHAR}, #{elecSealid,jdbcType=BIGINT}, 
+      #{sealId,jdbcType=VARCHAR}, #{rlsealId,jdbcType=VARCHAR}, #{signStatus,jdbcType=TINYINT}, 
+      #{page,jdbcType=INTEGER}, #{left,jdbcType=INTEGER}, #{top,jdbcType=INTEGER}, #{width,jdbcType=INTEGER}, 
+      #{height,jdbcType=INTEGER}, #{requestIp,jdbcType=VARCHAR}, #{sysTraceNo,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{reason,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, biz_alias, biz_name, channel_alias, channel_name, seal_name, original_file_id, 
+    file_id, elec_sealid, seal_id, rlseal_id, sign_status, page, left, top, width, height, 
+    request_ip, sys_trace_no, create_time, reason
+    from elec_signature
+  </select>
+</mapper>
